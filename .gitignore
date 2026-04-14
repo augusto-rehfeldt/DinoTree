@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.vscode/
+.pytest_cache/
+.mypy_cache/
+venv/
+.venv/
+trees/
+.tmp_trees/
+arbol_final_pruned.xml
