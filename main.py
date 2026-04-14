@@ -18,6 +18,9 @@ from tree_utils import (
     prune_clades,
 )
 
+from wiki_parser import fetch_wiki_trees
+import json
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -53,6 +56,38 @@ def cmd_prune(args):
     print(f"Processed {removed} clade(s)")
     return 0
 
+def cmd_fetch_wiki(args):
+    logger.info("Fetching taxonomy data for %d genera from Wikipedia...", len(args.genera))
+    trees = fetch_wiki_trees(args.genera, num_workers=args.workers)
+    
+    if not trees:
+        logger.warning("No genera trees were successfully fetched.")
+        return 1
+        
+    logger.info("Successfully fetched %d trees. Unknown ancestors were handled recursively.", len(trees))
+    
+    if args.update_dict:
+        data_file = args.data or DATA_FILE
+        existing_data = {}
+        if data_file.exists():
+            try:
+                with data_file.open("r", encoding="utf-8") as f:
+                    existing_data = json.load(f)
+            except Exception as e:
+                logger.warning("Could not read existing data file. Starting fresh. Error: %s", e)
+        
+        for name, tree in trees.items():
+            existing_data[name] = tree
+            
+        with data_file.open("w", encoding="utf-8") as f:
+            json.dump(existing_data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        logger.info("Updated %s with new genera.", data_file)
+    else:
+        print(json.dumps(trees, indent=2, ensure_ascii=False))
+        
+    return 0
+
 def main():
     parser = argparse.ArgumentParser(description="Dinosaur Trees processing toolkit")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -81,6 +116,14 @@ def main():
     parser_prune.add_argument("--output", type=Path, default=None, help="Output phyloxml file")
     parser_prune.add_argument("names", nargs="+", help="Clade names to remove or collapse")
     parser_prune.set_defaults(func=cmd_prune)
+
+    # Fetch Wiki
+    parser_wiki = subparsers.add_parser("fetch-wiki", help="Fetch specific dinosaur genera taxonomy from Wikipedia")
+    parser_wiki.add_argument("genera", nargs="+", help="One or more dinosaur genera to fetch (e.g. Alpkarakush Tyrannosaurus)")
+    parser_wiki.add_argument("--update-dict", action="store_true", help="Update dino_dict.json with the generated trees")
+    parser_wiki.add_argument("--data", type=Path, default=DATA_FILE, help="Path to dino_dict.json")
+    parser_wiki.add_argument("--workers", type=int, default=5, help="Number of concurrent Wikipedia requests")
+    parser_wiki.set_defaults(func=cmd_fetch_wiki)
 
     args = parser.parse_args()
     return args.func(args)

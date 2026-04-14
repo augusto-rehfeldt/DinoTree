@@ -8,3 +8,5 @@ venv/
 trees/
 .tmp_trees/
 arbol_final_pruned.xml
+dino_dict.json
+final_tree.xml

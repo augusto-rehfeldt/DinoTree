@@ -57,6 +57,17 @@ python main.py list-clades --input final_tree.xml
 *Options:*
 - `--unique`: Print each clade name only once, ignoring duplicates.
 
+### Fetch from Wikipedia
+
+Fetch the full hierarchy of ancestors for multiple specific valid dinosaur genera from Wikipedia:
+
+```powershell
+python main.py fetch-wiki Alpkarakush Tyrannosaurus
+```
+*Options:*
+- `--update-dict`: Automatically updates and merges the result into `dino_dict.json`.
+- `--workers`: Specify the number of concurrent web requests to use (defaults to 5).
+
 ### Prune Clades
 
 Remove specific clade elements from a phyloXML tree while keeping their sub-clades. 
