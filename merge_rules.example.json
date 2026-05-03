@@ -1,0 +1,14 @@
+{
+  "rename": {
+    "Velociraptor osmolskae": "\"Velociraptor\" osmolskae"
+  },
+  "collapse": [
+    "Incertae sedis"
+  ],
+  "remove": [
+    "Paleontology"
+  ],
+  "drop_leaves": [
+    "Dubiousaurus"
+  ]
+}

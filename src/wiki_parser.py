@@ -4,6 +4,10 @@ import re
 import concurrent.futures
 from typing import Dict, Any, List
 
+REQUEST_TIMEOUT_SECONDS = 10
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DinoTreeBot/1.0"}
+
+
 def clean_taxon_name(name: str) -> str:
     name = re.sub(r'\[.*?\]', '', name)
     name = name.replace('†', '').replace('?', '').strip()
@@ -11,8 +15,7 @@ def clean_taxon_name(name: str) -> str:
 
 def fetch_dinosaur_genera_links() -> Dict[str, str]:
     url = "https://en.wikipedia.org/wiki/List_of_dinosaur_genera"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DinoTreeBot/1.0"}
-    resp = requests.get(url, headers=headers)
+    resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT_SECONDS)
     resp.raise_for_status()
     
     # Matching pattern: <li><i><a href="/wiki/... " title="...">Name</a></i>
@@ -27,9 +30,8 @@ def fetch_dinosaur_genera_links() -> Dict[str, str]:
     return genera_links
 
 def fetch_genus_lineage(url: str) -> List[str]:
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DinoTreeBot/1.0"}
     try:
-        resp = requests.get(url, headers=headers, timeout=10)
+        resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT_SECONDS)
         resp.raise_for_status()
     except Exception:
         return []

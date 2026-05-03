@@ -47,6 +47,53 @@ To quickly delete all generated `.xml`, `.nwk`, and `.tre` files from the trees 
 python main.py clean
 ```
 
+### Merge Trees
+
+Merge all entries from `dino_dict.json` into one combined tree. By default this writes `merged_tree.xml`, `merged_tree.nwk`, `merged_tree.dot`, and `merged_tree_conflicts.json`.
+
+```powershell
+python main.py merge --data dino_dict.json --output merged_tree.xml
+```
+
+Render a PNG cladistic tree image:
+
+```powershell
+python main.py merge --data dino_dict.json --output merged_tree.xml --png-output merged_tree.png
+```
+
+PNG rendering uses Graphviz `dot` when it is installed and available on `PATH`. If Graphviz is not installed, DinoTree falls back to matplotlib when available. The command also writes the `.dot` file, which can be rendered later:
+
+```powershell
+dot -Tpng merged_tree.dot -o merged_tree.png
+```
+
+Use `--rules` to normalize and prune while merging:
+
+```powershell
+python main.py merge --rules merge_rules.example.json --output merged_tree.xml
+```
+
+Rule fields:
+- `rename`: maps one clade name to another before merge.
+- `collapse`: removes a clade but lifts its children into the parent.
+- `remove`: removes a clade and all descendants.
+- `drop_leaves`: removes matching leaf-only clades.
+
+Conflict handling:
+- Flat source cladograms are interpreted as an earliest ancestor followed by contained taxa.
+- Explicit nested lineages are used as canonical anchors when the same clade also appears at root.
+- Root copies of clades are merged into the earliest non-root placement when no explicit anchor exists.
+- Any remaining duplicate clade names are resolved to one path by preferring non-root placements, stronger source support, and deeper paths.
+- Taxonomic hindsight moves binomial species under their matching genus and type genera under matching `-idae` families when those nodes exist.
+- The conflicts JSON is empty when every clade name has one final placement.
+- Add `--strict-conflicts` to make those conflicts fail the command.
+- Add `--include-entry-names` to insert top-level `dino_dict.json` keys as leaves when they are absent from their own tree data.
+
+Rendering options:
+- `--dot-output`: choose the Graphviz `.dot` output path.
+- `--no-dot`: skip writing the Graphviz `.dot` file.
+- `--png-output`: render a PNG via Graphviz `dot`, or matplotlib as a fallback.
+
 ### List Clades
 
 Extract and print all clade names present in a specific phyloXML file:
@@ -60,6 +107,12 @@ python main.py list-clades --input final_tree.xml
 ### Fetch from Wikipedia
 
 Fetch the full hierarchy of ancestors for multiple specific valid dinosaur genera from Wikipedia:
+
+This command requires the optional scraping dependencies:
+
+```powershell
+python -m pip install -r requirements-wiki.txt
+```
 
 ```powershell
 python main.py fetch-wiki Alpkarakush Tyrannosaurus
@@ -81,4 +134,6 @@ python main.py prune --input final_tree.xml Coelophysoidea
 
 ## Notes
 
-- The scripts only require the Python standard library.
+- Core commands use only the Python standard library.
+- `fetch-wiki` requires the optional `requests` and `beautifulsoup4` packages.
+- `merge --png-output` requires either Graphviz `dot` or matplotlib.
