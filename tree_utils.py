@@ -4,14 +4,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 from xml.sax.saxutils import escape
-import concurrent.futures
 import json
 import re
 import shutil
 import subprocess
 
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(__file__).resolve().parent
 DATA_FILE = ROOT_DIR / "dino_dict.json"
 TREES_DIR = ROOT_DIR / "trees"
 FINAL_TREE_FILE = ROOT_DIR / "final_tree.xml"
@@ -142,18 +141,18 @@ def sync_tree_files(
 
     tasks = [(dino_name, tree_data, trees_dir) for dino_name, tree_data in dino_dict.items()]
 
-    # Use ProcessPoolExecutor to speed up CPU-bound tree generation strings and I/O writes
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        for xml_written, nwk_written in executor.map(_process_single_tree, tasks):
-            if xml_written:
-                stats.written += 1
-            else:
-                stats.skipped += 1
+    # ponytail: process pool was I/O-bound, a loop is faster here
+    for task in tasks:
+        xml_written, nwk_written = _process_single_tree(task)
+        if xml_written:
+            stats.written += 1
+        else:
+            stats.skipped += 1
                 
-            if nwk_written:
-                stats.written += 1
-            else:
-                stats.skipped += 1
+        if nwk_written:
+            stats.written += 1
+        else:
+            stats.skipped += 1
 
     return stats
 
@@ -224,7 +223,7 @@ def write_merged_tree_files(
         if dot_output is None:
             dot_output = png_output.with_suffix(".dot")
             write_text_if_changed(dot_output, build_graphviz_dot(root_name, result.tree))
-        render_tree_png(root_name, result.tree, png_output, dot_output=dot_output)
+        render_graphviz_png(dot_output, png_output)
         stats.written += 1
 
     return stats
@@ -271,94 +270,6 @@ def render_graphviz_png(dot_path: Path, png_path: Path, dot_command: str = "dot"
         capture_output=True,
         text=True,
     )
-
-
-def render_tree_png(
-    root_name: str,
-    data: Any,
-    png_path: Path,
-    dot_output: Path | None = None,
-    dot_command: str = "dot",
-) -> None:
-    if dot_output is not None and shutil.which(dot_command) is not None:
-        render_graphviz_png(dot_output, png_path, dot_command=dot_command)
-        return
-    render_matplotlib_cladogram(root_name, data, png_path)
-
-
-def render_matplotlib_cladogram(root_name: str, data: Any, png_path: Path) -> None:
-    try:
-        import matplotlib
-
-        matplotlib.use("Agg")
-        import matplotlib.pyplot as plt
-    except ImportError as exc:
-        raise RuntimeError(
-            "PNG rendering requires either Graphviz 'dot' on PATH or matplotlib installed."
-        ) from exc
-
-    nodes: list[tuple[int, str, int, float]] = []
-    edges: list[tuple[int, int]] = []
-    leaf_y = 0
-
-    def visit(label: str, children: Any, depth: int) -> tuple[int, float, int]:
-        nonlocal leaf_y
-        node_id = len(nodes)
-        nodes.append((node_id, label, depth, 0.0))
-
-        raw_children = _iter_raw_children(children)
-        if not raw_children:
-            y = float(leaf_y)
-            leaf_y += 1
-        else:
-            child_ys = []
-            for child_name, child_data in raw_children:
-                child_id, child_y, _child_depth = visit(str(child_name), child_data, depth + 1)
-                edges.append((node_id, child_id))
-                child_ys.append(child_y)
-            y = sum(child_ys) / len(child_ys)
-
-        nodes[node_id] = (node_id, label, depth, y)
-        return node_id, y, depth
-
-    visit(root_name, data, 0)
-    if not nodes:
-        raise RuntimeError("Cannot render an empty tree")
-
-    positions = {node_id: (depth, y) for node_id, _label, depth, y in nodes}
-    max_depth = max(depth for _node_id, _label, depth, _y in nodes)
-    leaf_count = max(leaf_y, 1)
-    width = max(12.0, max_depth * 2.2 + 8.0)
-    height = max(8.0, min(260.0, leaf_count * 0.16))
-    font_size = 7 if leaf_count < 300 else 5
-
-    fig, ax = plt.subplots(figsize=(width, height), dpi=140)
-    for parent_id, child_id in edges:
-        parent_x, parent_y = positions[parent_id]
-        child_x, child_y = positions[child_id]
-        ax.plot([parent_x, parent_x], [parent_y, child_y], color="#5d5137", linewidth=0.45)
-        ax.plot([parent_x, child_x], [child_y, child_y], color="#5d5137", linewidth=0.45)
-
-    for _node_id, label, depth, y in nodes:
-        ax.text(
-            depth + 0.04,
-            y,
-            label,
-            va="center",
-            ha="left",
-            fontsize=font_size,
-            color="#2f2a1d",
-        )
-
-    ax.set_xlim(-0.1, max_depth + 5.0)
-    ax.set_ylim(-1.0, leaf_count)
-    ax.invert_yaxis()
-    ax.axis("off")
-    fig.patch.set_facecolor("#fbfaf4")
-    ax.set_facecolor("#fbfaf4")
-    png_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(png_path, bbox_inches="tight", pad_inches=0.25)
-    plt.close(fig)
 
 
 def _quote_dot_label(label: str) -> str:

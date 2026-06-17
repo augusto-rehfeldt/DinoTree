@@ -4,9 +4,6 @@ import logging
 from pathlib import Path
 import sys
 
-# Fix relative import when running from root
-sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
-
 from tree_utils import (
     DATA_FILE,
     TREES_DIR,
@@ -186,7 +183,7 @@ def main():
     parser_merge.add_argument("--no-newick", action="store_true", help="Do not write a merged Newick file")
     parser_merge.add_argument("--dot-output", type=Path, default=None, help="Output merged Graphviz DOT file")
     parser_merge.add_argument("--no-dot", action="store_true", help="Do not write a merged Graphviz DOT file")
-    parser_merge.add_argument("--png-output", type=Path, default=None, help="Render the merged tree to a PNG file; uses Graphviz dot or matplotlib")
+    parser_merge.add_argument("--png-output", type=Path, default=None, help="Render the merged tree to a PNG file via Graphviz dot")
     parser_merge.add_argument("--conflicts-output", type=Path, default=None, help="Output merge conflict report JSON")
     parser_merge.add_argument("--no-conflicts", action="store_true", help="Do not write a merge conflict report")
     parser_merge.add_argument("--rules", type=Path, default=None, help="Optional JSON rules for rename, collapse, remove, and drop_leaves")
