@@ -65,7 +65,7 @@ python -m pip install -r requirements-poster.txt
 python main.py merge --poster merged_tree.png
 ```
 
-The poster also carries a geologic-time ring between the genus names and the colour bands: Triassic, Jurassic and Cretaceous are shaded rings (time runs outward), and each genus has a radial bar from its first to its last appearance (solid: central 80% of well-dated fossils; faint: their full dating windows). Ranges are built from securely identified Paleobiology Database fossil occurrences (well-dated ones, central 80%), with the taxon summary as fallback and a few curated overrides (`AGE_OVERRIDES` in `ages.py`); they are cached in `genus_ages.json`; refresh them with:
+The poster also carries a geologic-time ring between the genus names and the colour bands: Triassic, Jurassic and Cretaceous are shaded rings (time runs outward), and each genus has a radial bar from its first to its last appearance, joined to its name by a dotted leader (solid: central 80% of well-dated fossils; faint: their full dating windows). Ranges are built from securely identified Paleobiology Database fossil occurrences (well-dated ones, central 80%), with the taxon summary as fallback and a few curated overrides (`AGE_OVERRIDES` in `ages.py`); they are cached in `genus_ages.json`; refresh them with:
 
 ```powershell
 python main.py fetch-ages
