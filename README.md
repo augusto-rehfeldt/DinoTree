@@ -21,8 +21,11 @@ The tool operates via a centralized CLI controller (`main.py`) and is pure Pytho
 - `dino_dict.json`: Source taxonomy data containing dictionaries of dinosaur names mapped to their taxonomic structures.
 - `trees/`: Default output directory for generated `phyloXML` and `Newick` files, one pair per dinosaur.
 - `final_tree.xml`: An example `phyloXML` tree used for downstream pruning and inspection.
-- `src/`: Source code folder containing the fast XML and Newick building, parsing, and pruning utilities.
+- `tree_utils.py`: XML and Newick building, parsing and pruning utilities.
 - `main.py`: The main entrypoint file and CLI.
+- `merge.py`: Evidence-weighted merge of all source cladograms, with the curated backbone and name cleaning.
+- `poster.py` / `silhouettes.py`: Poster renderer and the code-drawn dinosaur silhouettes.
+- `ages.py` / `genus_ages.json`: Genus stratigraphic ranges from the Paleobiology Database (cached).
 
 ## Usage
 
@@ -49,50 +52,67 @@ python main.py clean
 
 ### Merge Trees
 
-Merge all entries from `dino_dict.json` into one combined tree. By default this writes `merged_tree.xml`, `merged_tree.nwk`, `merged_tree.dot`, and `merged_tree_conflicts.json`.
+Merge all entries from `dino_dict.json` into one tree. By default this writes `merged_tree.xml`, `merged_tree.nwk`, `merged_tree.dot` and `merged_tree_report.json`.
 
 ```powershell
 python main.py merge --data dino_dict.json --output merged_tree.xml
 ```
 
-Render a PNG cladistic tree image:
+Render the poster: a circular cladogram with clade-coloured branches, italic genus names, a colour band and a silhouette per major group, a legend and a short "how to read" note. The extension picks the format (`.png` at 150 dpi, or vector `.svg` / `.pdf` for print):
 
 ```powershell
-python main.py merge --data dino_dict.json --output merged_tree.xml --png-output merged_tree.png
+python -m pip install -r requirements-poster.txt
+python main.py merge --poster merged_tree.png
 ```
 
-PNG rendering uses Graphviz `dot` when it is installed and available on `PATH`. If Graphviz is not installed, DinoTree falls back to matplotlib when available. The command also writes the `.dot` file, which can be rendered later:
+The poster also carries a geologic-time ring between the genus names and the colour bands: Triassic, Jurassic and Cretaceous are shaded rings (time runs outward), and each genus has a radial bar from its first to its last appearance (solid: central 80% of well-dated fossils; faint: their full dating windows). Ranges are built from securely identified Paleobiology Database fossil occurrences (well-dated ones, central 80%), with the taxon summary as fallback and a few curated overrides (`AGE_OVERRIDES` in `ages.py`); they are cached in `genus_ages.json`; refresh them with:
 
 ```powershell
-dot -Tpng merged_tree.dot -o merged_tree.png
+python main.py fetch-ages
 ```
 
-Use `--rules` to normalize and prune while merging:
+`--png-output` is kept as an alias of `--poster`. The silhouettes are drawn from code in `silhouettes.py` (`python silhouettes.py` writes a contact sheet to `.tmp_trees/`).
+
+#### How the merge decides
+
+Most sources are flattened Wikipedia cladograms: a list whose first name is usually the clade that contains the rest. Every source is turned into weighted "clade C contains taxon X" claims (logic in `merge.py`):
+
+| Evidence | Weight |
+|---|---|
+| Curated backbone of well-supported clades (outgroups down to subfamilies), plus a few pinned genera (`PINS`) | overrides everything |
+| Name stem: a taxon sits in the next rank up of its name family (Tyrannosaurus in Tyrannosaurini in Tyrannosaurinae) | 10 |
+| The genus's own article cladogram | 3 |
+| Nested lineage (e.g. from `fetch-wiki`) | 2 |
+| Another genus's cladogram | 1 |
+| Every `dino_dict` entry is a dinosaur | 0.1, and a hard limit: entries never leave Dinosauria |
+
+Names are cleaned first: species collapse to their genus, `P. tubicen` expands when one genus in the list starts with P, and specimen numbers, formations and footnotes are dropped. A few typos and competing names are unified (`SYNONYMS` in `merge.py`).
+
+A whole list is ignored when it is rooted on an outgroup: it starts with a genus, the backbone says its first clade cannot contain another clade in it, or ranks are inverted (a tribe cannot contain a subfamily). Claims are then inserted strongest first. A claim is rejected when a genus would contain something, when ranks are inverted, when it would move a backbone clade, or when it contradicts stronger claims (a cycle).
+
+Placement walks down from the root and follows a branch only while its support is at least 3× its best rival (`DOMINANCE`). When rivals are close, the taxon stays at their common ancestor, so disagreement shows as a polytomy and not as a wrong split. Clades are placed first, then genera on the resulting clade tree, so no support is counted twice. `KNOWN_CLADES` lists unranked clade names that would otherwise look like genera. A family-group clade known only from its name stem (e.g. Shamosaurinae) borrows its members' containers (report source: "inherited from its members"), so it cannot pull its own type genus upwards. Genera with no usable claim go to the deepest clade holding at least 60% of their list-mates (the report lists them under `placed_by_company`). Taxa whose rival claims share no ancestor stay at the root and are reported as unplaced.
+
+List order is not used. Measured on this data, "taxa after a clade name belong to it" held only ~39% of the time.
+
+The report JSON records what the tree disagrees with:
+- `contradictions`: every rejected or outvoted claim, with its support, reason, sources and where the taxon went instead.
+- `outgroup_rooted_lists`, `placed_by_company`, `unplaced_taxa`, `empty_clades` and `dropped_names` (with reasons).
+
+Use `--rules` to normalise and prune:
 
 ```powershell
 python main.py merge --rules merge_rules.example.json --output merged_tree.xml
 ```
 
 Rule fields:
-- `rename`: maps one clade name to another before merge.
-- `collapse`: removes a clade but lifts its children into the parent.
+- `rename`: maps one name to another before merging.
+- `collapse`: removes a clade and lifts its children into its parent.
 - `remove`: removes a clade and all descendants.
-- `drop_leaves`: removes matching leaf-only clades.
+- `drop_leaves`: removes matching leaves.
 
-Conflict handling:
-- Flat source cladograms are interpreted as an earliest ancestor followed by contained taxa.
-- Explicit nested lineages are used as canonical anchors when the same clade also appears at root.
-- Root copies of clades are merged into the earliest non-root placement when no explicit anchor exists.
-- Any remaining duplicate clade names are resolved to one path by preferring non-root placements, stronger source support, and deeper paths.
-- Taxonomic hindsight moves binomial species under their matching genus and type genera under matching `-idae` families when those nodes exist.
-- The conflicts JSON is empty when every clade name has one final placement.
-- Add `--strict-conflicts` to make those conflicts fail the command.
-- Add `--include-entry-names` to insert top-level `dino_dict.json` keys as leaves when they are absent from their own tree data.
+Other options: `--report-output` / `--no-report`, `--dot-output` / `--no-dot`, `--newick-output` / `--no-newick`, `--root-name`.
 
-Rendering options:
-- `--dot-output`: choose the Graphviz `.dot` output path.
-- `--no-dot`: skip writing the Graphviz `.dot` file.
-- `--png-output`: render a PNG via Graphviz `dot`, or matplotlib as a fallback.
+Run the checks with `python test_merge.py` (or `pytest`).
 
 ### List Clades
 
@@ -126,7 +146,7 @@ python main.py fetch-wiki Alpkarakush Tyrannosaurus
 Remove specific clade elements from a phyloXML tree while keeping their sub-clades. 
 
 ```powershell
-python main.py prune --input final_tree.xml Coelophysoidea
+python main.py prune --input merged_tree.xml Riojasauridae
 ```
 *Options:*
 - `--input`: The input `.xml` tree to prune.
@@ -136,4 +156,4 @@ python main.py prune --input final_tree.xml Coelophysoidea
 
 - Core commands use only the Python standard library.
 - `fetch-wiki` requires the optional `requests` and `beautifulsoup4` packages.
-- `merge --png-output` requires either Graphviz `dot` or matplotlib.
+- `merge --poster` requires the optional `matplotlib` and `numpy` packages (`requirements-poster.txt`).

@@ -1,0 +1,2626 @@
+{
+  "summary": {
+    "sources": 714,
+    "outgroup_rooted_lists": 123,
+    "taxa": 1346,
+    "claims": 3677,
+    "rejected_claims": 9,
+    "outvoted_claims": 217,
+    "placed_by_company": 52,
+    "unplaced_taxa": 0,
+    "dropped_names": 42
+  },
+  "contradictions": [
+    {
+      "taxon": "Neovenator",
+      "claimed_container": "Neovenatoridae",
+      "support": 15.0,
+      "sources": [
+        "Aerosteon",
+        "Australovenator",
+        "Neovenator",
+        "name stem"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauria"
+    },
+    {
+      "taxon": "Aeolosaurus",
+      "claimed_container": "Aeolosaurini",
+      "support": 13.0,
+      "sources": [
+        "Aeolosaurus",
+        "name stem"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Anchisaurus",
+      "claimed_container": "Anchisauridae",
+      "support": 10.0,
+      "sources": [
+        "name stem"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Melanorosaurus",
+      "claimed_container": "Melanorosauridae",
+      "support": 10.0,
+      "sources": [
+        "name stem"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodiformes"
+    },
+    {
+      "taxon": "Omeisaurus",
+      "claimed_container": "Omeisauridae",
+      "support": 10.0,
+      "sources": [
+        "name stem"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropoda"
+    },
+    {
+      "taxon": "Rhabdodontidae",
+      "claimed_container": "Rhabdodontoidea",
+      "support": 10.0,
+      "sources": [
+        "name stem"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Saltasauridae",
+      "claimed_container": "Saltasauroidea",
+      "support": 10.0,
+      "sources": [
+        "name stem"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Unaysaurus",
+      "claimed_container": "Unaysauridae",
+      "support": 10.0,
+      "sources": [
+        "name stem"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Gastonia",
+      "claimed_container": "Nodosauridae",
+      "support": 9.0,
+      "sources": [
+        "Acantholipan",
+        "Borealopelta",
+        "Dongyangopelta",
+        "Europelta",
+        "Nodosaurus",
+        "Peloroplites",
+        "Polacanthus",
+        "Sauropelta"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauria"
+    },
+    {
+      "taxon": "Neovenator",
+      "claimed_container": "Carcharodontosauridae",
+      "support": 9.0,
+      "sources": [
+        "Eocarcharia",
+        "Giganotosaurus",
+        "Lajasvenator",
+        "Meraxes",
+        "Sauroniops",
+        "Shaochilong",
+        "Taurovenator",
+        "Tyrannotitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauria"
+    },
+    {
+      "taxon": "Anchisaurus",
+      "claimed_container": "Massopoda",
+      "support": 8.0,
+      "sources": [
+        "Adeopapposaurus",
+        "Isanosaurus",
+        "Leyesaurus",
+        "Melanorosaurus",
+        "Meroktenos",
+        "Ngwevu",
+        "Sefapanosaurus",
+        "Xingxiulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Aeolosaurus",
+      "claimed_container": "Lithostrotia",
+      "support": 6.0,
+      "sources": [
+        "Malawisaurus",
+        "Maxakalisaurus",
+        "Muyelensaurus",
+        "Nemegtosaurus",
+        "Tengrisaurus",
+        "Volgatitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Gastonia",
+      "claimed_container": "Ankylosauridae",
+      "support": 5.0,
+      "sources": [
+        "Aletopelta",
+        "Cedarpelta",
+        "Chuanqilong",
+        "Liaoningosaurus",
+        "Nodocephalosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauria"
+    },
+    {
+      "taxon": "Omeisaurus",
+      "claimed_container": "Mamenchisauridae",
+      "support": 5.0,
+      "sources": [
+        "Analong",
+        "Daanosaurus",
+        "Hudiesaurus",
+        "Jingiella",
+        "Rhomaleopakhus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropoda"
+    },
+    {
+      "taxon": "Sinovenator",
+      "claimed_container": "Deinonychosauria",
+      "support": 5.0,
+      "sources": [
+        "Daliansaurus",
+        "Geminiraptor",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sinovenatorinae"
+    },
+    {
+      "taxon": "Chilantaisaurus",
+      "claimed_container": "Allosauroidea",
+      "support": 4.0,
+      "sources": [
+        "Chilantaisaurus",
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Daliansaurus",
+      "claimed_container": "Deinonychosauria",
+      "support": 4.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Pennaraptora"
+    },
+    {
+      "taxon": "Melanorosaurus",
+      "claimed_container": "Sauropoda",
+      "support": 4.0,
+      "sources": [
+        "Amygdalodon",
+        "Chinshakiangosaurus",
+        "Gongxianosaurus",
+        "Volkheimeria"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodiformes"
+    },
+    {
+      "taxon": "Omeisaurus",
+      "claimed_container": "Eusauropoda",
+      "support": 4.0,
+      "sources": [
+        "Cetiosauriscus",
+        "Jobaria",
+        "Mierasaurus",
+        "Xenoposeidon"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropoda"
+    },
+    {
+      "taxon": "Aeolosaurus",
+      "claimed_container": "Rinconsauria",
+      "support": 3.0,
+      "sources": [
+        "Arrudatitan",
+        "Baurutitan",
+        "Caieiria"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Anchisaurus",
+      "claimed_container": "Plateosauria",
+      "support": 3.0,
+      "sources": [
+        "Mussaurus",
+        "Pulanesaura",
+        "Yunnanosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Avimimus",
+      "claimed_container": "Caenagnathoidea",
+      "support": 3.0,
+      "sources": [
+        "Avimimus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avimimidae"
+    },
+    {
+      "taxon": "Chilantaisaurus",
+      "claimed_container": "Neovenatoridae",
+      "support": 3.0,
+      "sources": [
+        "Aerosteon",
+        "Australovenator",
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Chilantaisaurus",
+      "claimed_container": "Therizinosauria",
+      "support": 3.0,
+      "sources": [
+        "Beipiaosaurus",
+        "Enigmosaurus",
+        "Jianchangosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Geminiraptor",
+      "claimed_container": "Deinonychosauria",
+      "support": 3.0,
+      "sources": [
+        "Geminiraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Pennaraptora"
+    },
+    {
+      "taxon": "Jinfengopteryx",
+      "claimed_container": "Troodontidae",
+      "support": 3.0,
+      "sources": [
+        "Borogovia",
+        "Tamarro",
+        "Xixiasaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Jinfengopteryginae"
+    },
+    {
+      "taxon": "Majungasaurus",
+      "claimed_container": "Carnotaurinae",
+      "support": 3.0,
+      "sources": [
+        "Aucasaurus",
+        "Carnotaurus",
+        "Ekrixinatosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Majungasaurini"
+    },
+    {
+      "taxon": "Megaraptora",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 3.0,
+      "sources": [
+        "Eotyrannus",
+        "Proceratosaurus",
+        "Xiongguanlong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Murusraptor",
+      "claimed_container": "Allosauria",
+      "support": 3.0,
+      "sources": [
+        "Murusraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Panoplosaurus",
+      "claimed_container": "Nodosaurinae",
+      "support": 3.0,
+      "sources": [
+        "Panoplosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Panoplosaurini"
+    },
+    {
+      "taxon": "Phuwiangvenator",
+      "claimed_container": "Coelurosauria",
+      "support": 3.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Pyroraptor",
+      "claimed_container": "Troodontidae",
+      "support": 3.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Thescelosaurus",
+      "claimed_container": "Ornithopoda",
+      "support": 3.0,
+      "sources": [
+        "Ampelognathus",
+        "Rhabdodon",
+        "Zalmoxes"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Thescelosauridae"
+    },
+    {
+      "taxon": "Unaysaurus",
+      "claimed_container": "Plateosauria",
+      "support": 3.0,
+      "sources": [
+        "Mussaurus",
+        "Plateosaurus",
+        "Sarahsaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Aeolosaurinae",
+      "claimed_container": "Lithostrotia",
+      "support": 2.0,
+      "sources": [
+        "Ampelosaurus",
+        "Muyelensaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Aeolosauridae"
+    },
+    {
+      "taxon": "Almas",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Aoniraptor",
+      "claimed_container": "Megaraptora",
+      "support": 2.0,
+      "sources": [
+        "Maip",
+        "Megaraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Atsinganosaurus",
+      "claimed_container": "Lithostrotia",
+      "support": 2.0,
+      "sources": [
+        "Ampelosaurus",
+        "Muyelensaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Australovenator",
+      "claimed_container": "Megaraptora",
+      "support": 2.0,
+      "sources": [
+        "Maip",
+        "Megaraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neovenatoridae"
+    },
+    {
+      "taxon": "Byronosaurus",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Changchunsaurus",
+      "claimed_container": "Ornithopoda",
+      "support": 2.0,
+      "sources": [
+        "Ampelognathus",
+        "Tenontosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neornithischia"
+    },
+    {
+      "taxon": "Changchunsaurus",
+      "claimed_container": "Thescelosauridae",
+      "support": 2.0,
+      "sources": [
+        "Albertadromeus",
+        "Fona"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neornithischia"
+    },
+    {
+      "taxon": "Colossosauria",
+      "claimed_container": "Eutitanosauria",
+      "support": 2.0,
+      "sources": [
+        "Titanomachya",
+        "Udelartitan"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Dacentrurus",
+      "claimed_container": "Stegosauridae",
+      "support": 2.0,
+      "sources": [
+        "Adratiklit",
+        "Kentrosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Dacentrurinae"
+    },
+    {
+      "taxon": "Daliansaurus",
+      "claimed_container": "Troodontidae",
+      "support": 2.0,
+      "sources": [
+        "Borogovia",
+        "Xixiasaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Pennaraptora"
+    },
+    {
+      "taxon": "Dromaeosauridae",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Fukuiraptor",
+      "claimed_container": "Allosauroidea",
+      "support": 2.0,
+      "sources": [
+        "Allosaurus",
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Fukuiraptor",
+      "claimed_container": "Neovenatoridae",
+      "support": 2.0,
+      "sources": [
+        "Aerosteon",
+        "Australovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Genusaurus",
+      "claimed_container": "Abelisauridae",
+      "support": 2.0,
+      "sources": [
+        "Dahalokely",
+        "Pycnonemosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Abelisauroidea"
+    },
+    {
+      "taxon": "Hadrosaurus",
+      "claimed_container": "Saurolophinae",
+      "support": 2.0,
+      "sources": [
+        "Bonapartesaurus",
+        "Edmontosaurus"
+      ],
+      "reason": "conflicts with a curated pin"
+    },
+    {
+      "taxon": "Herrerasaurus",
+      "claimed_container": "Theropoda",
+      "support": 2.0,
+      "sources": [
+        "Kayentavenator",
+        "Sinosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Herrerasauridae"
+    },
+    {
+      "taxon": "Hylaeosaurus",
+      "claimed_container": "Ankylosauridae",
+      "support": 2.0,
+      "sources": [
+        "Gobisaurus",
+        "Shamosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauria"
+    },
+    {
+      "taxon": "Hylaeosaurus",
+      "claimed_container": "Nodosauridae",
+      "support": 2.0,
+      "sources": [
+        "Peloroplites",
+        "Polacanthus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauria"
+    },
+    {
+      "taxon": "Jinfengopteryx",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Jinfengopteryginae"
+    },
+    {
+      "taxon": "Lirainosaurinae",
+      "claimed_container": "Lithostrotia",
+      "support": 2.0,
+      "sources": [
+        "Ampelosaurus",
+        "Muyelensaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Lirainosaurus",
+      "claimed_container": "Lithostrotia",
+      "support": 2.0,
+      "sources": [
+        "Ampelosaurus",
+        "Muyelensaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lirainosaurinae"
+    },
+    {
+      "taxon": "Megaraptora",
+      "claimed_container": "Neovenatoridae",
+      "support": 2.0,
+      "sources": [
+        "Aerosteon",
+        "Australovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Mei",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Monolophosaurus",
+      "claimed_container": "Allosauroidea",
+      "support": 2.0,
+      "sources": [
+        "Lourinhanosaurus",
+        "Ulughbegsaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Orionides"
+    },
+    {
+      "taxon": "Murusraptor",
+      "claimed_container": "Megaraptora",
+      "support": 2.0,
+      "sources": [
+        "Maip",
+        "Megaraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Phuwiangvenator",
+      "claimed_container": "Megaraptora",
+      "support": 2.0,
+      "sources": [
+        "Maip",
+        "Megaraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Saltasaurus",
+      "claimed_container": "Eutitanosauria",
+      "support": 2.0,
+      "sources": [
+        "Titanomachya",
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasaurini"
+    },
+    {
+      "taxon": "Sinornithoides",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Sinusonasus",
+      "claimed_container": "Troodontidae",
+      "support": 2.0,
+      "sources": [
+        "Borogovia",
+        "Harenadraco"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Troodon",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Vayuraptor",
+      "claimed_container": "Megaraptora",
+      "support": 2.0,
+      "sources": [
+        "Maip",
+        "Megaraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Zanabazar",
+      "claimed_container": "Deinonychosauria",
+      "support": 2.0,
+      "sources": [
+        "Daliansaurus",
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Acrocanthosaurus",
+      "claimed_container": "Neovenatoridae",
+      "support": 1.0,
+      "sources": [
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauridae"
+    },
+    {
+      "taxon": "Aerosteon",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neovenatoridae"
+    },
+    {
+      "taxon": "Aerosteon",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Eotyrannus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neovenatoridae"
+    },
+    {
+      "taxon": "Alamosaurus",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasauridae"
+    },
+    {
+      "taxon": "Alamosaurus",
+      "claimed_container": "Lognkosauria",
+      "support": 1.0,
+      "sources": [
+        "Mendozasaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasauridae"
+    },
+    {
+      "taxon": "Alamosaurus",
+      "claimed_container": "Saltasauroidea",
+      "support": 1.0,
+      "sources": [
+        "Qunkasaura"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasauridae"
+    },
+    {
+      "taxon": "Alioramus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Alioramini"
+    },
+    {
+      "taxon": "Allosaurus",
+      "claimed_container": "Neovenatoridae",
+      "support": 1.0,
+      "sources": [
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Allosauridae"
+    },
+    {
+      "taxon": "Almas",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Ampelosaurus",
+      "claimed_container": "Lirainosaurinae",
+      "support": 1.0,
+      "sources": [
+        "Garrigatitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lithostrotia"
+    },
+    {
+      "taxon": "Anchiornis",
+      "claimed_container": "Deinonychosauria",
+      "support": 1.0,
+      "sources": [
+        "Geminiraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Anchisaurus",
+      "claimed_container": "Sauropoda",
+      "support": 1.0,
+      "sources": [
+        "Chinshakiangosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Anchisaurus",
+      "claimed_container": "Sauropodiformes",
+      "support": 1.0,
+      "sources": [
+        "Schleitheimia"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Aniksosaurus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Aniksosaurus",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Eotyrannus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Animantarx",
+      "claimed_container": "Nodosaurinae",
+      "support": 1.0,
+      "sources": [
+        "Panoplosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Panoplosaurini"
+    },
+    {
+      "taxon": "Anodontosaurus",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Aoniraptor",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Appalachiosaurus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eutyrannosauria"
+    },
+    {
+      "taxon": "Archaeopteryx",
+      "claimed_container": "Deinonychosauria",
+      "support": 1.0,
+      "sources": [
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Archaeopterygidae"
+    },
+    {
+      "taxon": "Arenysaurus",
+      "claimed_container": "Lambeosaurini",
+      "support": 1.0,
+      "sources": [
+        "Corythosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Arenysaurini"
+    },
+    {
+      "taxon": "Arenysaurus",
+      "claimed_container": "Parasaurolophini",
+      "support": 1.0,
+      "sources": [
+        "Tlatolophus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Arenysaurini"
+    },
+    {
+      "taxon": "Atsinganosaurus",
+      "claimed_container": "Lirainosaurinae",
+      "support": 1.0,
+      "sources": [
+        "Garrigatitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Australovenator",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neovenatoridae"
+    },
+    {
+      "taxon": "Australovenator",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Eotyrannus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neovenatoridae"
+    },
+    {
+      "taxon": "Austroraptor",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Unenlagiinae"
+    },
+    {
+      "taxon": "Avialae",
+      "claimed_container": "Deinonychosauria",
+      "support": 1.0,
+      "sources": [
+        "Sinovenator"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Bambiraptor",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eudromaeosauria"
+    },
+    {
+      "taxon": "Bistahieversor",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Tyrannosauridae"
+    },
+    {
+      "taxon": "Blasisaurus",
+      "claimed_container": "Arenysaurini",
+      "support": 1.0,
+      "sources": [
+        "Ajnabia"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurinae"
+    },
+    {
+      "taxon": "Blasisaurus",
+      "claimed_container": "Parasaurolophini",
+      "support": 1.0,
+      "sources": [
+        "Tlatolophus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurinae"
+    },
+    {
+      "taxon": "Bonatitan",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasauridae"
+    },
+    {
+      "taxon": "Bonitasaura",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Colossosauria"
+    },
+    {
+      "taxon": "Bonitasaura",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Colossosauria"
+    },
+    {
+      "taxon": "Buitreraptor",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Unenlagiinae"
+    },
+    {
+      "taxon": "Carcharodontosaurus",
+      "claimed_container": "Neovenatoridae",
+      "support": 1.0,
+      "sources": [
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauridae"
+    },
+    {
+      "taxon": "Caudipteryx",
+      "claimed_container": "Caenagnathoidea",
+      "support": 1.0,
+      "sources": [
+        "Avimimus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Caudipteridae"
+    },
+    {
+      "taxon": "Chilantaisaurus",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Eotyrannus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Corythosaurus",
+      "claimed_container": "Parasaurolophini",
+      "support": 1.0,
+      "sources": [
+        "Tlatolophus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurini"
+    },
+    {
+      "taxon": "Crichtonpelta",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Dakotaraptor",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eudromaeosauria"
+    },
+    {
+      "taxon": "Dakotaraptor",
+      "claimed_container": "Unenlagiinae",
+      "support": 1.0,
+      "sources": [
+        "Buitreraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eudromaeosauria"
+    },
+    {
+      "taxon": "Daliansaurus",
+      "claimed_container": "Paraves",
+      "support": 1.0,
+      "sources": [
+        "Jianianhualong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Pennaraptora"
+    },
+    {
+      "taxon": "Datai",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauridae"
+    },
+    {
+      "taxon": "Deinonychus",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Velociraptorinae"
+    },
+    {
+      "taxon": "Deltadromeus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Chilantaisaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Noasauridae"
+    },
+    {
+      "taxon": "Dromaeosaurus",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Dromaeosaurinae"
+    },
+    {
+      "taxon": "Dryptosaurus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eutyrannosauria"
+    },
+    {
+      "taxon": "Edmontonia",
+      "claimed_container": "Nodosaurinae",
+      "support": 1.0,
+      "sources": [
+        "Panoplosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Panoplosaurini"
+    },
+    {
+      "taxon": "Eotyrannus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Tyrannosauroidea"
+    },
+    {
+      "taxon": "Euoplocephalus",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Eustreptospondylus",
+      "claimed_container": "Megalosauridae",
+      "support": 1.0,
+      "sources": [
+        "Wiehenvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eustreptospondylinae"
+    },
+    {
+      "taxon": "Fukuiraptor",
+      "claimed_container": "Allosauria",
+      "support": 1.0,
+      "sources": [
+        "Murusraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Fukuiraptor",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Fukuiraptor",
+      "claimed_container": "Megaraptora",
+      "support": 1.0,
+      "sources": [
+        "Megaraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Fukuiraptor",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Eotyrannus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Futalognkosaurus",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lognkosauria"
+    },
+    {
+      "taxon": "Gargoyleosaurus",
+      "claimed_container": "Ankylosauridae",
+      "support": 1.0,
+      "sources": [
+        "Cedarpelta"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Nodosauridae"
+    },
+    {
+      "taxon": "Geminiraptor",
+      "claimed_container": "Paraves",
+      "support": 1.0,
+      "sources": [
+        "Jianianhualong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Pennaraptora"
+    },
+    {
+      "taxon": "Geminiraptor",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Tamarro"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Pennaraptora"
+    },
+    {
+      "taxon": "Genusaurus",
+      "claimed_container": "Noasauridae",
+      "support": 1.0,
+      "sources": [
+        "Limusaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Abelisauroidea"
+    },
+    {
+      "taxon": "Gondwanatitan",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Rinconsauria"
+    },
+    {
+      "taxon": "Gorgosaurus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Tyrannosauridae"
+    },
+    {
+      "taxon": "Gryposaurus",
+      "claimed_container": "Lambeosaurinae",
+      "support": 1.0,
+      "sources": [
+        "Amurosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Kritosaurini"
+    },
+    {
+      "taxon": "Halszkaraptor",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Halszkaraptorinae"
+    },
+    {
+      "taxon": "Halszkaraptor",
+      "claimed_container": "Unenlagiinae",
+      "support": 1.0,
+      "sources": [
+        "Ningyuansaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Halszkaraptorinae"
+    },
+    {
+      "taxon": "Haya",
+      "claimed_container": "Ornithopoda",
+      "support": 1.0,
+      "sources": [
+        "Ampelognathus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neornithischia"
+    },
+    {
+      "taxon": "Haya",
+      "claimed_container": "Thescelosauridae",
+      "support": 1.0,
+      "sources": [
+        "Fona"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neornithischia"
+    },
+    {
+      "taxon": "Huayangosaurus",
+      "claimed_container": "Ankylosauridae",
+      "support": 1.0,
+      "sources": [
+        "Cedarpelta"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Stegosauria"
+    },
+    {
+      "taxon": "Hypacrosaurus",
+      "claimed_container": "Lambeosaurini",
+      "support": 1.0,
+      "sources": [
+        "Corythosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurinae"
+    },
+    {
+      "taxon": "Hypacrosaurus",
+      "claimed_container": "Parasaurolophini",
+      "support": 1.0,
+      "sources": [
+        "Tlatolophus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurinae"
+    },
+    {
+      "taxon": "Ibirania",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasauridae"
+    },
+    {
+      "taxon": "Isisaurus",
+      "claimed_container": "Saltasauroidea",
+      "support": 1.0,
+      "sources": [
+        "Qunkasaura"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eutitanosauria"
+    },
+    {
+      "taxon": "Jeholosaurus",
+      "claimed_container": "Ornithopoda",
+      "support": 1.0,
+      "sources": [
+        "Ampelognathus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Jeholosaurinae"
+    },
+    {
+      "taxon": "Jeholosaurus",
+      "claimed_container": "Thescelosauridae",
+      "support": 1.0,
+      "sources": [
+        "Fona"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Jeholosaurinae"
+    },
+    {
+      "taxon": "Jinyunpelta",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauridae"
+    },
+    {
+      "taxon": "Kaatedocus",
+      "claimed_container": "Dicraeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Smitanosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Diplodocinae"
+    },
+    {
+      "taxon": "Kulindadromeus",
+      "claimed_container": "Ornithopoda",
+      "support": 1.0,
+      "sources": [
+        "Ampelognathus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neornithischia"
+    },
+    {
+      "taxon": "Kulindadromeus",
+      "claimed_container": "Thescelosauridae",
+      "support": 1.0,
+      "sources": [
+        "Fona"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Neornithischia"
+    },
+    {
+      "taxon": "Labocania",
+      "claimed_container": "Eutyrannosauria",
+      "support": 1.0,
+      "sources": [
+        "Bistahieversor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauridae"
+    },
+    {
+      "taxon": "Lambeosaurus",
+      "claimed_container": "Parasaurolophini",
+      "support": 1.0,
+      "sources": [
+        "Tlatolophus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurini"
+    },
+    {
+      "taxon": "Lesothosaurus",
+      "claimed_container": "Ankylosauridae",
+      "support": 1.0,
+      "sources": [
+        "Cedarpelta"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ornithischia"
+    },
+    {
+      "taxon": "Lesothosaurus",
+      "claimed_container": "Neornithischia",
+      "support": 1.0,
+      "sources": [
+        "Minimocursor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ornithischia"
+    },
+    {
+      "taxon": "Lesothosaurus",
+      "claimed_container": "Thyreophora",
+      "support": 1.0,
+      "sources": [
+        "Paranthodon"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ornithischia"
+    },
+    {
+      "taxon": "Linhevenator",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Lirainosaurinae",
+      "claimed_container": "Saltasauroidea",
+      "support": 1.0,
+      "sources": [
+        "Qunkasaura"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Titanosauria"
+    },
+    {
+      "taxon": "Lognkosauria",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Lythronax",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Tyrannosaurinae"
+    },
+    {
+      "taxon": "Magnapaulia",
+      "claimed_container": "Lambeosaurini",
+      "support": 1.0,
+      "sources": [
+        "Corythosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurinae"
+    },
+    {
+      "taxon": "Magnapaulia",
+      "claimed_container": "Parasaurolophini",
+      "support": 1.0,
+      "sources": [
+        "Tlatolophus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lambeosaurinae"
+    },
+    {
+      "taxon": "Mahakala",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Dromaeosauridae"
+    },
+    {
+      "taxon": "Mapusaurus",
+      "claimed_container": "Neovenatoridae",
+      "support": 1.0,
+      "sources": [
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauridae"
+    },
+    {
+      "taxon": "Megaraptor",
+      "claimed_container": "Allosauria",
+      "support": 1.0,
+      "sources": [
+        "Murusraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Megaraptora"
+    },
+    {
+      "taxon": "Megaraptor",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Megaraptora"
+    },
+    {
+      "taxon": "Megaraptora",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Megaraptora",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Mei",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Monolophosaurus",
+      "claimed_container": "Megalosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Riojavenatrix"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Orionides"
+    },
+    {
+      "taxon": "Murusraptor",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Muyelensaurus",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Rinconsauria"
+    },
+    {
+      "taxon": "Neuquensaurus",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saltasauridae"
+    },
+    {
+      "taxon": "Ningyuansaurus",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Borogovia"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Unenlagiinae"
+    },
+    {
+      "taxon": "Nomingia",
+      "claimed_container": "Caenagnathidae",
+      "support": 1.0,
+      "sources": [
+        "Hagryphus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Caenagnathoidea"
+    },
+    {
+      "taxon": "Nomingia",
+      "claimed_container": "Oviraptoridae",
+      "support": 1.0,
+      "sources": [
+        "Heyuannia"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Caenagnathoidea"
+    },
+    {
+      "taxon": "Opisthocoelicaudia",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Opisthocoelicaudiinae"
+    },
+    {
+      "taxon": "Opisthocoelicaudia",
+      "claimed_container": "Saltasauroidea",
+      "support": 1.0,
+      "sources": [
+        "Qunkasaura"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Opisthocoelicaudiinae"
+    },
+    {
+      "taxon": "Orodromeus",
+      "claimed_container": "Ornithopoda",
+      "support": 1.0,
+      "sources": [
+        "Tenontosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Orodrominae"
+    },
+    {
+      "taxon": "Overosaurus",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Rinconsauria"
+    },
+    {
+      "taxon": "Papiliovenator",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Urbacodon"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Dromaeosauridae"
+    },
+    {
+      "taxon": "Parksosaurus",
+      "claimed_container": "Thescelosauridae",
+      "support": 1.0,
+      "sources": [
+        "Albertadromeus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Parksosaurinae"
+    },
+    {
+      "taxon": "Phuwiangosaurus",
+      "claimed_container": "Euhelopodidae",
+      "support": 1.0,
+      "sources": [
+        "Silutitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Somphospondyli"
+    },
+    {
+      "taxon": "Phuwiangosaurus",
+      "claimed_container": "Titanosauria",
+      "support": 1.0,
+      "sources": [
+        "Epachthosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Somphospondyli"
+    },
+    {
+      "taxon": "Pinacosaurus",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Plateosaurus",
+      "claimed_container": "Sauropoda",
+      "support": 1.0,
+      "sources": [
+        "Omeisaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Plateosauridae"
+    },
+    {
+      "taxon": "Puertasaurus",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lognkosauria"
+    },
+    {
+      "taxon": "Punatitan",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lithostrotia"
+    },
+    {
+      "taxon": "Punatitan",
+      "claimed_container": "Rinconsauria",
+      "support": 1.0,
+      "sources": [
+        "Arrudatitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Lithostrotia"
+    },
+    {
+      "taxon": "Pyroraptor",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Natovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Pyroraptor",
+      "claimed_container": "Unenlagiinae",
+      "support": 1.0,
+      "sources": [
+        "Buitreraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Rahonavis",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Acheroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Rahonavis",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Rahonavis",
+      "claimed_container": "Unenlagiinae",
+      "support": 1.0,
+      "sources": [
+        "Buitreraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Rapetosaurus",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eutitanosauria"
+    },
+    {
+      "taxon": "Rapetosaurus",
+      "claimed_container": "Saltasauroidea",
+      "support": 1.0,
+      "sources": [
+        "Qunkasaura"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eutitanosauria"
+    },
+    {
+      "taxon": "Rinconsauria",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Rinconsaurus",
+      "claimed_container": "Aeolosaurini",
+      "support": 1.0,
+      "sources": [
+        "Aeolosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Rinconsauria"
+    },
+    {
+      "taxon": "Riojasaurus",
+      "claimed_container": "Sauropodiformes",
+      "support": 1.0,
+      "sources": [
+        "Lishulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Riojasauridae"
+    },
+    {
+      "taxon": "Saichania",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Saltasaurinae",
+      "claimed_container": "Saltasauroidea",
+      "support": 1.0,
+      "sources": [
+        "Qunkasaura"
+      ],
+      "reason": "conflicts with the curated backbone"
+    },
+    {
+      "taxon": "Saurornithoides",
+      "claimed_container": "Deinonychosauria",
+      "support": 1.0,
+      "sources": [
+        "Geminiraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Saurornithoides",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Saurornitholestes",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Saurornitholestinae"
+    },
+    {
+      "taxon": "Scolosaurus",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Shamosaurinae",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "inherited from its members"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosauridae"
+    },
+    {
+      "taxon": "Shamosaurus",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Shamosaurinae"
+    },
+    {
+      "taxon": "Shaochilong",
+      "claimed_container": "Neovenatoridae",
+      "support": 1.0,
+      "sources": [
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauridae"
+    },
+    {
+      "taxon": "Siamotyrannus",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Siamotyrannus",
+      "claimed_container": "Metriacanthosauridae",
+      "support": 1.0,
+      "sources": [
+        "Siamraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Siats",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Eotyrannus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Allosauroidea"
+    },
+    {
+      "taxon": "Sinovenator",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sinovenatorinae"
+    },
+    {
+      "taxon": "Sinusonasus",
+      "claimed_container": "Deinonychosauria",
+      "support": 1.0,
+      "sources": [
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Sinusonasus",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Paraves"
+    },
+    {
+      "taxon": "Tarchia",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Texasetes",
+      "claimed_container": "Nodosaurinae",
+      "support": 1.0,
+      "sources": [
+        "Panoplosaurus"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Panoplosaurini"
+    },
+    {
+      "taxon": "Tsaagan",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Pyroraptor"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Eudromaeosauria"
+    },
+    {
+      "taxon": "Tsagantegia",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Tugulusaurus",
+      "claimed_container": "Tyrannosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Xiongguanlong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Alvarezsauroidea"
+    },
+    {
+      "taxon": "Tyrannotitan",
+      "claimed_container": "Neovenatoridae",
+      "support": 1.0,
+      "sources": [
+        "Neovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Carcharodontosauridae"
+    },
+    {
+      "taxon": "Uberabatitan",
+      "claimed_container": "Eutitanosauria",
+      "support": 1.0,
+      "sources": [
+        "Udelartitan"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Rinconsauria"
+    },
+    {
+      "taxon": "Unaysaurus",
+      "claimed_container": "Massopoda",
+      "support": 1.0,
+      "sources": [
+        "Xingxiulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Sauropodomorpha"
+    },
+    {
+      "taxon": "Vayuraptor",
+      "claimed_container": "Coelurosauria",
+      "support": 1.0,
+      "sources": [
+        "Phuwiangvenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Avetheropoda"
+    },
+    {
+      "taxon": "Xiaotingia",
+      "claimed_container": "Deinonychosauria",
+      "support": 1.0,
+      "sources": [
+        "Sinovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Dromaeosauridae"
+    },
+    {
+      "taxon": "Xiaotingia",
+      "claimed_container": "Troodontidae",
+      "support": 1.0,
+      "sources": [
+        "Borogovia"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Dromaeosauridae"
+    },
+    {
+      "taxon": "Xiongguanlong",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Tyrannosauroidea"
+    },
+    {
+      "taxon": "Xixiasaurus",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Yutyrannus",
+      "claimed_container": "Allosauroidea",
+      "support": 1.0,
+      "sources": [
+        "Siats"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Proceratosauridae"
+    },
+    {
+      "taxon": "Zanabazar",
+      "claimed_container": "Dromaeosauridae",
+      "support": 1.0,
+      "sources": [
+        "Papiliovenator"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Troodontidae"
+    },
+    {
+      "taxon": "Zaraapelta",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    },
+    {
+      "taxon": "Zuul",
+      "claimed_container": "Nodosauridae",
+      "support": 1.0,
+      "sources": [
+        "Huaxiazhoulong"
+      ],
+      "reason": "outvoted by a more specific or stronger placement",
+      "placed_under": "Ankylosaurinae"
+    }
+  ],
+  "placed_by_company": {
+    "\"Crichtonsaurus\" benxiensis": "Ankylosauridae",
+    "Ahshislepelta": "Ankylosauria",
+    "Amanasaurus": "Ornithischia",
+    "Anhuilong": "Eusauropoda",
+    "Augustynolophus": "Hadrosauridae",
+    "Barsboldia": "Saurolophinae",
+    "Basturs": "Lambeosaurinae",
+    "Burianosaurus": "Clypeodonta",
+    "Chakisaurus": "Iguanodontia",
+    "Chilesaurus": "Avetheropoda",
+    "Chromogisaurus": "Sauropodomorpha",
+    "Dracoraptor": "Neotheropoda",
+    "Dzharatitanis": "Neosauropoda",
+    "Furcatoceratops": "Ceratopsidae",
+    "Fusuisaurus": "Brachiosauridae",
+    "Gideonmantellia": "Clypeodonta",
+    "Gnathovorax": "Saurischia",
+    "Gondwanax": "Ornithischia",
+    "Gongpoquansaurus": "Hadrosauroidea",
+    "Gonkoken": "Saurolophinae",
+    "Grusimimus": "Ornithomimosauria",
+    "Haestasaurus": "Eusauropoda",
+    "Hypnovenator": "Troodontidae",
+    "Issi": "Sauropodomorpha",
+    "Juravenator": "Avetheropoda",
+    "Kundurosaurus": "Saurolophinae",
+    "Lamaceratops": "Ceratopsia",
+    "Magnirostris": "Ceratopsia",
+    "Morelladon": "Hadrosauroidea",
+    "Morrosaurus": "Ornithopoda",
+    "Nambalia": "Sauropodomorpha",
+    "Nanyangosaurus": "Hadrosauromorpha",
+    "Nhandumirim": "Saurischia",
+    "Notohypsilophodon": "Clypeodonta",
+    "Ohmdenosaurus": "Sauropoda",
+    "Pampadromaeus": "Eusaurischia",
+    "Poekilopleuron": "Orionides",
+    "Protohadros": "Hadrosauridae",
+    "Saltopus": "Ornithischia",
+    "Saltriovenator": "Neotheropoda",
+    "Sanjuansaurus": "Saurischia",
+    "Santanaraptor": "Coelurosauria",
+    "Shanxia": "Ankylosauridae",
+    "Sinocephale": "Pachycephalosauria",
+    "Stegopelta": "Nodosauridae",
+    "Stegouros": "Eurypoda",
+    "Szechuanosaurus": "Neotheropoda",
+    "Tameryraptor": "Carcharodontosauridae",
+    "Tendaguria": "Eusauropoda",
+    "Unescoceratops": "Leptoceratopsidae",
+    "Vegagete": "Iguanodontia",
+    "Ypupiara": "Dromaeosauridae"
+  },
+  "unplaced_taxa": [],
+  "empty_clades": [
+    "Anchiornithidae",
+    "Anchisauria",
+    "Anchisauridae",
+    "Austrokritosauria",
+    "Avialae",
+    "Brachyrostra",
+    "Captorhinidae",
+    "Confuciusornithidae",
+    "Diamantinasauria",
+    "Elasmaria",
+    "Hypsilophodontia",
+    "Jeholornithidae",
+    "Kuehneosauridae",
+    "Lagerpetidae",
+    "Lanthanosuchidae",
+    "Melanorosauridae",
+    "Millerettidae",
+    "Neoceratosauria",
+    "Omeisauridae",
+    "Ornithuromorpha",
+    "Pan-Lepidosauria",
+    "Parankylosauria",
+    "Parapredentata",
+    "Pareiasauromorpha",
+    "Prolacertiformes",
+    "Pseudosuchia",
+    "Pterosauromorpha",
+    "Rhabdodontoidea",
+    "Rhynchocephalia",
+    "Rhynchosauria",
+    "Sulcimentisauria",
+    "Titanosauromorpha",
+    "Turiasauria",
+    "Unaysauridae",
+    "Younginiformes"
+  ],
+  "outgroup_rooted_lists": {
+    "Abditosaurus": "backbone: Lognkosauria does not contain Opisthocoelicaudiinae",
+    "Acristavus": "starts with the genus Telmatosaurus",
+    "Acrocanthosaurus": "starts with the genus Allosaurus",
+    "Adynomosaurus": "backbone: Lambeosaurinae does not contain Hadrosauridae",
+    "Afromimus": "starts with the genus Berberosaurus",
+    "Afrovenator": "backbone: Avetheropoda does not contain Spinosauridae",
+    "Ahshislepelta": "backbone: Nodosauridae does not contain Ankylosauridae",
+    "Alaskacephale": "starts with the genus Psittacosaurus",
+    "Anabisetia": "starts with the genus Hypsilophodon",
+    "Anhuilong": "starts with the genus Shunosaurus",
+    "Antarctopelta": "starts with the genus Lesothosaurus",
+    "Antetonitrus": "backbone: Sauropodiformes does not contain Massopoda",
+    "Aorun": "backbone: Maniraptora does not contain Allosauroidea",
+    "Apatosaurus": "backbone: Apatosaurinae does not contain Diplodocidae",
+    "Appalachiosaurus": "starts with the genus Dilong",
+    "Argentinosaurus": "backbone: Rinconsauria does not contain Colossosauria",
+    "Asfaltovenator": "backbone: Carnosauria does not contain Spinosauridae",
+    "Austroraptor": "backbone: Unenlagiinae does not contain Halszkaraptorinae",
+    "Barsboldia": "starts with the genus Telmatosaurus",
+    "Baryonyx": "backbone: Megalosauridae does not contain Baryonychinae",
+    "Berberosaurus": "backbone: Noasauridae does not contain Ceratosauridae",
+    "Bravoceratops": "starts with the genus Chasmosaurus",
+    "Burianosaurus": "backbone: Clypeodonta does not contain Marginocephalia",
+    "Byronosaurus": "starts with the genus Almas",
+    "Camarillasaurus": "backbone: Ceratosauria does not contain Megalosauridae",
+    "Canardia": "backbone: Lambeosaurinae does not contain Hadrosauridae",
+    "Carcharodontosaurus": "backbone: Carcharodontosauriformes does not contain Metriacanthosauridae",
+    "Ceratosuchops": "backbone: Baryonychinae does not contain Spinosauridae",
+    "Chakisaurus": "starts with the genus Tenontosaurus",
+    "Charonosaurus": "starts with the genus Gryposaurus",
+    "Chilesaurus": "backbone: Theropoda does not contain Herrerasauridae",
+    "Compsognathus": "backbone: Compsognathidae does not contain Tetanurae",
+    "Concavenator": "starts with the genus Allosaurus",
+    "Coronosaurus": "starts with the genus Diabloceratops",
+    "Crittendenceratops": "starts with the genus Diabloceratops",
+    "Daemonosaurus": "backbone: Theropoda does not contain Silesauridae",
+    "Dakotaraptor": "backbone: Eudromaeosauria does not contain Unenlagiinae",
+    "Deltadromeus": "backbone: Abelisauroidea does not contain Allosauroidea",
+    "Dineobellator": "backbone: Eudromaeosauria does not contain Dromaeosauridae",
+    "Dzharatitanis": "backbone: Rebbachisauridae does not contain Lognkosauria",
+    "Eolambia": "starts with the genus Iguanodon",
+    "Eoraptor": "backbone: Theropoda does not contain Herrerasauridae",
+    "Euoplocephalus": "backbone: Ankylosaurinae does not contain Ankylosauridae",
+    "Fruitadens": "starts with the genus Echinodon",
+    "Fukuiraptor": "starts with the genus Fukuiraptor",
+    "Furcatoceratops": "starts with the genus Leptoceratops",
+    "Garudimimus": "rank: Deinocheiridae cannot contain Garudimimidae",
+    "Gasparinisaura": "starts with the genus Hypsilophodon",
+    "Gideonmantellia": "backbone: Clypeodonta does not contain Marginocephalia",
+    "Giraffatitan": "backbone: Brachiosauridae does not contain Macronaria",
+    "Gonkoken": "starts with the genus Eotrachodon",
+    "Gryphoceratops": "starts with the genus Asiaceratops",
+    "Gualicho": "backbone: Allosauroidea does not contain Avetheropoda",
+    "Haplocheirus": "backbone: Maniraptora does not contain Compsognathidae",
+    "Hylaeosaurus": "backbone: Nodosauridae does not contain Ankylosauridae",
+    "Hypacrosaurus": "starts with the genus Xuwulong",
+    "Hypnovenator": "backbone: Troodontidae does not contain Halszkaraptorinae",
+    "Hypsilophodon": "backbone: Clypeodonta does not contain Marginocephalia",
+    "Ischioceratops": "backbone: Leptoceratopsidae does not contain Protoceratopsidae",
+    "Isisaurus": "backbone: Opisthocoelicaudiinae does not contain Lithostrotia",
+    "Issi": "starts with the genus Chromogisaurus",
+    "Jaklapallisaurus": "starts with the genus Bagualosaurus",
+    "Jiangxititan": "backbone: Titanosauria does not contain Titanosauriformes",
+    "Jinfengopteryx": "backbone: Oviraptorosauria does not contain Scansoriopterygidae",
+    "Kaatedocus": "backbone: Diplodocidae does not contain Dicraeosauridae",
+    "Klamelisaurus": "backbone: Mamenchisauridae does not contain Euhelopodidae",
+    "Kulindadromeus": "backbone: Heterodontosauridae does not contain Cerapoda",
+    "Kunbarrasaurus": "starts with the genus Lesothosaurus",
+    "Kundurosaurus": "starts with the genus Bactrosaurus",
+    "Labocania": "rank: Alioramini cannot contain Albertosaurinae",
+    "Lesothosaurus": "starts with the genus Euparkeria",
+    "Liaoningvenator": "backbone: Scansoriopterygidae does not contain Dromaeosauridae",
+    "Lohuecotitan": "backbone: Lithostrotia does not contain Titanosauria",
+    "Magnapaulia": "starts with the genus Telmatosaurus",
+    "Mapusaurus": "starts with the genus Neovenator",
+    "Minotaurasaurus": "starts with the genus Minotaurasaurus",
+    "Morrosaurus": "starts with the genus Hypsilophodon",
+    "Mymoorapelta": "backbone: Nodosauridae does not contain Ankylosauridae",
+    "Nipponosaurus": "starts with the genus Parasaurolophus",
+    "Notohypsilophodon": "starts with the genus Hypsilophodon",
+    "Ohmdenosaurus": "starts with the genus Isanosaurus",
+    "Paludititan": "backbone: Lithostrotia does not contain Titanosauria",
+    "Pararhabdodon": "starts with the genus Iguanodon",
+    "Parksosaurus": "starts with the genus Hypsilophodon",
+    "Patagopelta": "backbone: Nodosauridae does not contain Ankylosauria",
+    "Patagosaurus": "backbone: Eusauropoda does not contain Sauropodomorpha",
+    "Pawpawsaurus": "rank: Struthiosaurini cannot contain Nodosauridae",
+    "Protoceratops": "backbone: Coronosauria does not contain Leptoceratopsidae",
+    "Regaliceratops": "starts with the genus Anchiceratops",
+    "Riparovenator": "backbone: Baryonychinae does not contain Spinosauridae",
+    "Rugops": "backbone: Abelisauridae does not contain Ceratosauria",
+    "Ruyangosaurus": "backbone: Titanosauria does not contain Euhelopodidae",
+    "Scipionyx": "backbone: Tyrannoraptora does not contain Compsognathidae",
+    "Shantungosaurus": "starts with the genus Telmatosaurus",
+    "Shanxia": "starts with the genus Huayangosaurus",
+    "Sinocalliopteryx": "backbone: Tyrannoraptora does not contain Compsognathidae",
+    "Sinocephale": "starts with the genus Psittacosaurus",
+    "Sinoceratops": "starts with the genus Diabloceratops",
+    "Sinosauropteryx": "backbone: Coelurosauria does not contain Tetanurae",
+    "Skorpiovenator": "rank: Carnotaurinae cannot contain Abelisauridae",
+    "Spinophorosaurus": "backbone: Gravisauria does not contain Sauropoda",
+    "Spinops": "starts with the genus Diabloceratops",
+    "Staurikosaurus": "backbone: Theropoda does not contain Herrerasauridae",
+    "Stegouros": "starts with the genus Lesothosaurus",
+    "Styracosaurus": "starts with the genus Diabloceratops",
+    "Suuwassea": "starts with the genus Dyslocosaurus",
+    "Tameryraptor": "backbone: Carcharodontosauriformes does not contain Metriacanthosauridae",
+    "Tendaguria": "backbone: Somphospondyli does not contain Eusauropoda",
+    "Teratophoneus": "backbone: Tyrannosauridae does not contain Eutyrannosauria",
+    "Tethyshadros": "backbone: Hadrosauromorpha does not contain Hadrosauroidea",
+    "Thescelosaurus": "rank: Hypsilophodontidae cannot contain Thescelosauridae",
+    "Tianyulong": "starts with the genus Echinodon",
+    "Tianzhenosaurus": "starts with the genus Huayangosaurus",
+    "Trinisaura": "starts with the genus Hypsilophodon",
+    "Unenlagia": "backbone: Unenlagiinae does not contain Paraves",
+    "Unescoceratops": "starts with the genus Asiaceratops",
+    "Xenoceratops": "starts with the genus Diabloceratops",
+    "Xuanhanosaurus": "backbone: Carnosauria does not contain Spinosauridae",
+    "Ypupiara": "backbone: Unenlagiinae does not contain Halszkaraptorinae",
+    "Zhanghenglong": "starts with the genus Bactrosaurus",
+    "Zuniceratops": "backbone: Coronosauria does not contain Leptoceratopsidae",
+    "Zuolong": "backbone: Coelurosauria does not contain Tetanurae",
+    "Zupaysaurus": "backbone: Theropoda does not contain Herrerasauridae"
+  },
+  "dropped_names": {
+    "Aguja Fm.": "not a taxon name (locality, formation or informal label)",
+    "Aguja Formation": "not a taxon name (locality, formation or informal label)",
+    "Amphibians": "not a taxon name (locality, formation or informal label)",
+    "Archosaurs": "not a taxon name (locality, formation or informal label)",
+    "Bajo Barreal": "not a taxon name (locality, formation or informal label)",
+    "Bajo Barreal Formation": "not a taxon name (locality, formation or informal label)",
+    "Basal": "not a taxon name (locality, formation or informal label)",
+    "Bayan Shireh": "not a taxon name (locality, formation or informal label)",
+    "Baynshire Formation": "not a taxon name (locality, formation or informal label)",
+    "CCG": "not a taxon name (locality, formation or informal label)",
+    "Cloverly": "not a taxon name (locality, formation or informal label)",
+    "Crocodilians": "not a taxon name (locality, formation or informal label)",
+    "Dinosaur Park": "not a taxon name (locality, formation or informal label)",
+    "Djadokhta Fm.": "not a taxon name (locality, formation or informal label)",
+    "EK troodontid": "not a taxon name (locality, formation or informal label)",
+    "Hekou Group": "not a taxon name (locality, formation or informal label)",
+    "IGM 100/22": "specimen number",
+    "IGM 100/42": "specimen number",
+    "IGM 100/44": "specimen number",
+    "IGM10044": "specimen number",
+    "Kaiparowits": "not a taxon name (locality, formation or informal label)",
+    "Lightning Ridge": "not a taxon name (locality, formation or informal label)",
+    "MPC-D 100/44": "specimen number",
+    "Mammals": "not a taxon name (locality, formation or informal label)",
+    "NHMUK PV R 6856": "specimen number",
+    "P. cyrtocristatus": "abbreviated species without a unique genus in its list",
+    "P. tubicen": "abbreviated species without a unique genus in its list",
+    "Paleontology": "not a taxon name (locality, formation or informal label)",
+    "Reptiles": "not a taxon name (locality, formation or informal label)",
+    "S. rhodesiensis": "abbreviated species without a unique genus in its list",
+    "SAM-PK-K10654": "specimen number",
+    "Serrat del Rostiar lambeosaurine": "not a taxon name (locality, formation or informal label)",
+    "Synapsids": "not a taxon name (locality, formation or informal label)",
+    "T. kielanae": "abbreviated species without a unique genus in its list",
+    "T. tilletti": "abbreviated species without a unique genus in its list",
+    "Two Medicine": "not a taxon name (locality, formation or informal label)",
+    "Wulansuhai Fm.": "not a taxon name (locality, formation or informal label)",
+    "Zamyn Khondt oviraptorid": "not a taxon name (locality, formation or informal label)",
+    "[9]": "empty or footnote",
+    "cf.": "not a taxon name (locality, formation or informal label)",
+    "immanis": "not a taxon name (locality, formation or informal label)",
+    "zheziangensis": "not a taxon name (locality, formation or informal label)"
+  }
+}

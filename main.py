@@ -8,14 +8,16 @@ from tree_utils import (
     DATA_FILE,
     TREES_DIR,
     FINAL_TREE_FILE,
+    build_graphviz_dot,
+    build_newick,
+    build_phyloxml,
     load_dino_dict,
     sync_tree_files,
     clean_generated_tree_files,
     list_clade_names,
     load_merge_rules,
-    merge_dino_trees,
     prune_clades,
-    write_merged_tree_files,
+    write_text_if_changed,
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -60,48 +62,48 @@ def cmd_prune(args):
     return 0
 
 def cmd_merge(args):
-    data_file = args.data or DATA_FILE
-    dino_dict = load_dino_dict(data_file)
-    rules = load_merge_rules(args.rules)
-    result = merge_dino_trees(dino_dict, rules=rules, include_entry_names=args.include_entry_names)
+    from merge import merge_dino_trees
 
-    newick_output = args.newick_output
-    if newick_output is None and not args.no_newick:
-        newick_output = args.output.with_suffix(".nwk")
+    dino_dict = load_dino_dict(args.data or DATA_FILE)
+    result = merge_dino_trees(dino_dict, rules=load_merge_rules(args.rules))
 
-    conflicts_output = args.conflicts_output
-    if conflicts_output is None and not args.no_conflicts:
-        conflicts_output = args.output.with_name(f"{args.output.stem}_conflicts.json")
+    outputs = {args.output: build_phyloxml(args.root_name, result.tree)}
+    if not args.no_newick:
+        outputs[args.newick_output or args.output.with_suffix(".nwk")] = build_newick(args.root_name, result.tree)
+    if not args.no_dot:
+        outputs[args.dot_output or args.output.with_suffix(".dot")] = build_graphviz_dot(args.root_name, result.tree)
+    if not args.no_report:
+        report_path = args.report_output or args.output.with_name(f"{args.output.stem}_report.json")
+        outputs[report_path] = json.dumps(result.report, indent=2, ensure_ascii=False) + "\n"
+    written = sum(write_text_if_changed(path, content) for path, content in outputs.items())
+    unchanged = len(outputs) - written
 
-    dot_output = args.dot_output
-    if dot_output is None and not args.no_dot:
-        dot_output = args.output.with_suffix(".dot")
+    if args.poster:
+        try:
+            from poster import render_poster
+        except ImportError as exc:
+            logger.error("--poster needs matplotlib and numpy (%s). Install requirements-poster.txt.", exc.name)
+            return 1
+        from ages import load_ages
 
-    try:
-        stats = write_merged_tree_files(
-            result,
-            root_name=args.root_name,
-            xml_output=args.output,
-            newick_output=newick_output,
-            conflicts_output=conflicts_output,
-            dot_output=dot_output,
-            png_output=args.png_output,
-        )
-    except RuntimeError as exc:
-        logger.error("%s", exc)
-        return 1
+        render_poster(result.tree, args.poster, result.source_count, ages=load_ages())
+        logger.info("Rendered poster %s", args.poster)
 
+    summary = result.report["summary"]
     logger.info(
-        "Merged %s source tree(s); wrote %s file(s), skipped %s unchanged file(s), found %s conflict(s)",
-        result.source_count,
-        stats.written,
-        stats.skipped,
-        len(result.conflicts),
+        "Merged %s source tree(s) into %s taxa; wrote %s file(s), %s unchanged. "
+        "%s claim(s) rejected, %s outvoted, %s taxa unplaced (see the report).",
+        result.source_count, summary["taxa"], written, unchanged,
+        summary["rejected_claims"], summary["outvoted_claims"], summary["unplaced_taxa"],
     )
+    return 0
 
-    if result.conflicts and args.strict_conflicts:
-        logger.error("Merge conflicts found. See %s", conflicts_output or "conflict output")
-        return 1
+def cmd_fetch_ages(args):
+    from ages import AGES_FILE, fetch_pbdb_ages, save_ages
+
+    ages = fetch_pbdb_ages()
+    save_ages(ages, args.output or AGES_FILE)
+    logger.info("Saved stratigraphic ranges for %s genus names to %s", len(ages), args.output or AGES_FILE)
     return 0
 
 def cmd_fetch_wiki(args):
@@ -183,14 +185,17 @@ def main():
     parser_merge.add_argument("--no-newick", action="store_true", help="Do not write a merged Newick file")
     parser_merge.add_argument("--dot-output", type=Path, default=None, help="Output merged Graphviz DOT file")
     parser_merge.add_argument("--no-dot", action="store_true", help="Do not write a merged Graphviz DOT file")
-    parser_merge.add_argument("--png-output", type=Path, default=None, help="Render the merged tree to a PNG file via Graphviz dot")
-    parser_merge.add_argument("--conflicts-output", type=Path, default=None, help="Output merge conflict report JSON")
-    parser_merge.add_argument("--no-conflicts", action="store_true", help="Do not write a merge conflict report")
+    parser_merge.add_argument("--poster", "--png-output", type=Path, default=None, help="Render a poster cladogram (.png, .svg or .pdf)")
+    parser_merge.add_argument("--report-output", type=Path, default=None, help="Output merge report JSON (contradictions, unplaced and dropped names)")
+    parser_merge.add_argument("--no-report", action="store_true", help="Do not write the merge report")
     parser_merge.add_argument("--rules", type=Path, default=None, help="Optional JSON rules for rename, collapse, remove, and drop_leaves")
     parser_merge.add_argument("--root-name", default="DinoTree", help="Root name for the merged output tree")
-    parser_merge.add_argument("--include-entry-names", action="store_true", help="Add top-level dino_dict keys as leaves when absent from their own tree data")
-    parser_merge.add_argument("--strict-conflicts", action="store_true", help="Return a non-zero exit code if duplicate taxa appear under multiple parents")
     parser_merge.set_defaults(func=cmd_merge)
+
+    # Fetch ages
+    parser_ages = subparsers.add_parser("fetch-ages", help="Download genus first/last appearances from the Paleobiology Database")
+    parser_ages.add_argument("--output", type=Path, default=None, help="Output JSON (default genus_ages.json)")
+    parser_ages.set_defaults(func=cmd_fetch_ages)
 
     # Fetch Wiki
     parser_wiki = subparsers.add_parser("fetch-wiki", help="Fetch specific dinosaur genera taxonomy from Wikipedia")
