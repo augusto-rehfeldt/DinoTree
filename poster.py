@@ -16,6 +16,8 @@ from matplotlib import patheffects
 from matplotlib.collections import LineCollection
 from matplotlib.colors import to_rgb
 from matplotlib.patches import Polygon, Rectangle, Wedge
+from matplotlib.font_manager import FontProperties
+from matplotlib.textpath import TextToPath
 import numpy as np
 
 from silhouettes import silhouette
@@ -240,6 +242,17 @@ def render_poster(
         )
 
     if ages:
+        # Dotted leaders run from the end of each name across the ring, so a bar can be traced to its genus.
+        measure = TextToPath()
+        leaders, leader_colors = [], []
+        for leaf in (leaf for leaf in leaves if leaf.name in ages):
+            style = "normal" if leaf.name.startswith('"') else "italic"
+            name_w = measure.get_text_width_height_descent(leaf.name, FontProperties(family="serif", style=style, size=label_pt), ismath=False)[0] / 72
+            c, s = math.cos(leaf.theta), math.sin(leaf.theta)
+            start = r_tip + 0.06 + name_w + 0.04
+            leaders.append([(cx + start * c, cy + start * s), (cx + time_out * c, cy + time_out * s)])
+            leader_colors.append(colour(leaf))
+        ax.add_collection(LineCollection(leaders, colors=leader_colors, linewidths=0.35, linestyles=(0, (1.2, 1.6)), alpha=0.7, zorder=1.5))
         _draw_time_ring(ax, leaves, ages, cx, cy, time_in, time_out, gap * step, colour)
 
     # Named clades with enough genera get a label on their node.
